@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: source-sans-pro;
+  src: url("https://use.typekit.net/jxz5zvn.css") format("opentype");
+}
+
+@font-face {
+    font-family: icomoon;
+    src: url("./assets/fonts/icomoon.ttf") format("truetype");
+  }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "source-sans-pro", sans-serif;
+  color: #333;
+  background-color: #fdfdfd;
+}
+
+h1 {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 2.2rem;
+}

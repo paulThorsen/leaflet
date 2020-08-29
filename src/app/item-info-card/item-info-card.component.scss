@@ -1,0 +1,45 @@
+.card-container {
+  border: 0.1rem solid #eee;
+  box-shadow: 0 0.3rem 0.6rem 0 #aaa;
+  border-radius: 0.4rem;
+  padding: 1rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.item-card-header {
+    margin-bottom: .8rem;
+    color: #777;
+}
+
+.item-card-body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.item-card-footer {
+}
+
+.item-type-icon {
+    font-family: icomoon;
+    color: #777;
+}
+
+.item-thumbnail {
+    max-width: 12rem;
+    border: .1rem solid #ccc;
+    padding: .6rem;
+    width: 100%;
+}
+
+.item-details {
+    margin-left: 1.6rem;
+}
+
+.item-author {
+    color: #777;
+}
+
+
