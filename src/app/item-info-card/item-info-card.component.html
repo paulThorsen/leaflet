@@ -1,20 +1,28 @@
 <div class="card-container">
-    <h2 class="item-card-header">
-        <span class="item-type-icon">
-            <span [outerHTML]="item.type | itemTypeIconPipe"></span>
-        </span>
-        {{ item.type | itemTypeTextPipe }}
-    </h2>
+    <div class="item-card-header">
+        <h2 class="item-type">
+            <span class="item-type-icon">
+                <span [outerHTML]="item.type | itemTypeIconPipe"></span>
+            </span>
+            {{ item.type | itemTypeTextPipe }}
+        </h2>
+        <hr>
+    </div>
     <div class="item-card-body">
-        <img src="{{item.thumbnail}}" class="item-thumbnail">
+        <img src="{{ item.thumbnail }}" class="item-thumbnail">
         <div class="item-details">
             <h3 class="item-title">
-                {{item.title}}
+                {{ item.title }}
             </h3>
-            <div class="item-author">
-                {{item.author}}
+            <div *ngIf="item.author" class="item-author">
+                {{ item.author }}
+            </div>
+            <div class="item-description">
+                {{ item.description }}
+            </div>
+            <div class="item-buttons">
+                <app-primary-button></app-primary-button>
             </div>
         </div>
     </div>
-    <div class="item-card-footer"></div>
 </div>
