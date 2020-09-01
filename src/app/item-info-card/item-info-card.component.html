@@ -17,10 +17,10 @@
       <div *ngIf="item.author" class="item-author">
         {{ item.author }}
       </div>
-      <div class="item-description">
+      <div class="item-description" [class.show-more-description]="showMore">
         {{ item.description }}
       </div>
-      <div class="show-more-link">
+      <div *ngIf="showMoreOptionVisible" class="show-more-link">
         <div class="text-link" (click)="toggleShowMore()">
           <div *ngIf="!showMore; then showMoreBlock; else showLessBlock"></div>
           <ng-template #showMoreBlock>
@@ -36,12 +36,14 @@
       </div>
       <div class="item-buttons">
         <app-primary-button
+          (click)="submitUserInterest(false)"
           [title]="'Not interested'"
           [isDestructive]="true"
           [icon]="'&#xea0f;'"
         ></app-primary-button>
         <div class="horizontal-spacer"></div>
         <app-primary-button
+          (click)="submitUserInterest(true)"
           [title]="'Interested'"
           [icon]="'&#xea10;'"
         ></app-primary-button>

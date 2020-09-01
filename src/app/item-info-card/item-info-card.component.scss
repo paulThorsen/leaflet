@@ -63,6 +63,12 @@
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  line-height: 1.4rem;
+}
+
+.show-more-description {
+  overflow: visible;
+  -webkit-line-clamp: 100;
 }
 
 .item-buttons {
@@ -115,4 +121,5 @@
 
 .show-more-link {
   display: inline-block;
+  margin-bottom: 2rem;
 }

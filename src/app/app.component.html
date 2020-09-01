@@ -9,5 +9,13 @@
       would be interested or not interested in each item.
     </p>
   </div>
-  <app-item-info-card *ngIf="item" [item]="item"></app-item-info-card>
+  <app-item-info-card
+    @fadeIn
+    *ngIf="item && !isLoading"
+    [item]="item"
+    (submitIsInterested)="submitUserSelection($event)"
+  ></app-item-info-card>
+  <div class="spinner-wrapper">
+    <app-spinner *ngIf="!item || isLoading"></app-spinner>
+  </div>
 </div>

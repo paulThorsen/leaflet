@@ -3,15 +3,23 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ItemInfoCardComponent } from './item-info-card/item-info-card.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ItemTypeTextPipe } from './pipes/item-type-text-pipe'
+import { ItemTypeTextPipe } from './pipes/item-type-text-pipe';
 import { ItemTypeIconPipe } from './pipes/item-type-icon-pipe';
 import { PrimaryButtonComponent } from './primary-button/primary-button.component';
-import { SpinnerComponent } from './spinner/spinner.component'
+import { SpinnerComponent } from './spinner/spinner.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [AppComponent, ItemInfoCardComponent, ItemTypeTextPipe, ItemTypeIconPipe, PrimaryButtonComponent, SpinnerComponent],
-  imports: [BrowserModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    ItemInfoCardComponent,
+    ItemTypeTextPipe,
+    ItemTypeIconPipe,
+    PrimaryButtonComponent,
+    SpinnerComponent,
+  ],
+  imports: [BrowserModule, HttpClientModule, BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

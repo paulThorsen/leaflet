@@ -1,0 +1,29 @@
+.spinner {
+  border: 0.6rem solid rgb(112, 173, 241);
+  border-radius: 100%;
+  border-top: 0.6rem solid rgb(39, 106, 182);
+  // rem sizing cuts off part of border
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spinAnimate 1s infinite; /* Safari */
+  animation: spinAnimate 1s infinite;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes spinAnimate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spinAnimate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
