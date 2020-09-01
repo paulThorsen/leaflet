@@ -1,9 +1,9 @@
 @import url("https://use.typekit.net/jxz5zvn.css");
 
 @font-face {
-    font-family: icomoon;
-    src: url("./assets/fonts/icomoon.ttf") format("truetype");
-  }
+  font-family: icomoon;
+  src: url("./assets/fonts/icomoon.ttf") format("truetype");
+}
 
 * {
   box-sizing: border-box;
@@ -26,8 +26,24 @@ h3 {
   font-size: 2.2rem;
 }
 
+h4 {
+  font-size: 1.1rem;
+  color: #555;
+}
+
 hr {
   background-color: #ccc;
   height: 1px;
   border: none;
+}
+
+.text-link {
+  color: rgb(33, 99, 173);
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.text-link:hover {
+  color: rgb(23, 79, 143);
+  cursor: pointer;
 }

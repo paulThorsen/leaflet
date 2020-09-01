@@ -17,5 +17,11 @@ export class ItemInfoCardComponent {
     return this._item;
   }
 
+  showMore = false;
+
   constructor() {}
+
+  toggleShowMore() {
+    this.showMore = !this.showMore;
+  }
 }

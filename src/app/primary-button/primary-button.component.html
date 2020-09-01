@@ -1,3 +1,6 @@
-<div class="container">
-    <div>Button</div>
+<div class="btn-container" [class.destructive-btn]="isDestructive">
+  <span class="icon">
+    {{ icon }}
+  </span>
+  {{ title }}
 </div>

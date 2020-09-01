@@ -1,28 +1,51 @@
 <div class="card-container">
-    <div class="item-card-header">
-        <h2 class="item-type">
-            <span class="item-type-icon">
-                <span [outerHTML]="item.type | itemTypeIconPipe"></span>
-            </span>
-            {{ item.type | itemTypeTextPipe }}
-        </h2>
-        <hr>
-    </div>
-    <div class="item-card-body">
-        <img src="{{ item.thumbnail }}" class="item-thumbnail">
-        <div class="item-details">
-            <h3 class="item-title">
-                {{ item.title }}
-            </h3>
-            <div *ngIf="item.author" class="item-author">
-                {{ item.author }}
-            </div>
-            <div class="item-description">
-                {{ item.description }}
-            </div>
-            <div class="item-buttons">
-                <app-primary-button></app-primary-button>
-            </div>
+  <div class="item-card-header">
+    <h2 class="item-type">
+      <span class="item-type-icon">
+        <span [outerHTML]="item.type | itemTypeIconPipe"></span>
+      </span>
+      {{ item.type | itemTypeTextPipe }}
+    </h2>
+    <hr />
+  </div>
+  <div class="item-card-body">
+    <img src="{{ item.thumbnail }}" class="item-thumbnail" />
+    <div class="item-details">
+      <h3 class="item-title">
+        {{ item.title }}
+      </h3>
+      <div *ngIf="item.author" class="item-author">
+        {{ item.author }}
+      </div>
+      <div class="item-description">
+        {{ item.description }}
+      </div>
+      <div class="show-more-link">
+        <div class="text-link" (click)="toggleShowMore()">
+          <div *ngIf="!showMore; then showMoreBlock; else showLessBlock"></div>
+          <ng-template #showMoreBlock>
+            Show more <span class="arrow-down"></span
+          ></ng-template>
+          <ng-template #showLessBlock>
+            Show less <span class="arrow-up"></span
+          ></ng-template>
         </div>
+      </div>
+      <div class="buttons-header">
+        <h4>Would you be interested in this item?</h4>
+      </div>
+      <div class="item-buttons">
+        <app-primary-button
+          [title]="'Not interested'"
+          [isDestructive]="true"
+          [icon]="'&#xea0f;'"
+        ></app-primary-button>
+        <div class="horizontal-spacer"></div>
+        <app-primary-button
+          [title]="'Interested'"
+          [icon]="'&#xea10;'"
+        ></app-primary-button>
+      </div>
     </div>
+  </div>
 </div>
