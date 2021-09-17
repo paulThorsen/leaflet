@@ -13,9 +13,9 @@ interface UserRatingResponse {
   itemId: string;
   rating: boolean;
 }
-
-const GET_ITEM_URL = 'https://api.lib.byu.edu/leaflet/item';
-const SAVE_USER_RATING_URL = 'https://api.lib.byu.edu/leaflet/pthorsen/ratings';
+const BASE_URI = 'https://leaflet-cors.origin.lib.byu.edu/leaflet';
+const GET_ITEM_URL_PATH = '/item';
+const SAVE_USER_RATING_URL_PATH = '/users/pthorsen/ratings';
 
 @Injectable({
   providedIn: 'root',
@@ -24,7 +24,7 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   getItem(): Observable<Item> {
-    return this.http.get<Item>(GET_ITEM_URL);
+    return this.http.get<Item>(BASE_URI + GET_ITEM_URL_PATH);
   }
 
   submitIsInterested(
@@ -35,6 +35,10 @@ export class ItemService {
       itemId: itemId,
       rating: isInterested,
     };
-    return this.http.post<UserRatingResponse>(SAVE_USER_RATING_URL, userRating);
+    console.log(userRating);
+    return this.http.post<UserRatingResponse>(
+      BASE_URI + SAVE_USER_RATING_URL_PATH,
+      userRating
+    );
   }
 }
