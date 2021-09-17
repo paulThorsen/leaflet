@@ -13,7 +13,7 @@ interface UserRatingResponse {
   itemId: string;
   rating: boolean;
 }
-const BASE_URI = 'https://leaflet-cors.origin.lib.byu.edu/leaflet';
+const BASE_URI = 'https://api.lib.byu.edu/leaflet';
 const GET_ITEM_URL_PATH = '/item';
 const SAVE_USER_RATING_URL_PATH = '/users/pthorsen/ratings';
 
